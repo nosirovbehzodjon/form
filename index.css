@@ -1,0 +1,229 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+body {
+    font-family: "Lato", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.wrapper {
+    height: 100vh;
+    background-image: url("./img/back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+}
+.left-side {
+    width: auto;
+    height: 100%;
+    padding-left: 100px;
+    padding-top: 200px;
+}
+.right-side {
+    width: 600px;
+    height: 100%;
+    padding-top: 200px;
+    padding-left: 70px;
+    background-color: rgba(0, 0, 0, 0.434);
+    backdrop-filter: blur(5px);
+}
+.right-side h2 {
+    font-size: 25px;
+    margin-bottom: 100px;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.left-side .logo {
+    font-size: 30px;
+    color: white;
+    font-weight: 900;
+}
+
+.left-side h1 {
+    margin-top: 200px;
+    width: 400px;
+    letter-spacing: 3px;
+    color: white;
+    font-size: 50px;
+}
+.left-side p {
+    font-size: 20px;
+    color: white;
+    letter-spacing: 1px;
+    width: 550px;
+    margin: 20px 0;
+}
+
+.left-side .icons,
+.right-side .icons {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-side .icons .icon a,
+.right-side .icons .icon a {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+.left-side .icons .icon a:hover,
+.right-side .icons .icon a:hover {
+    border: 1px solid white;
+}
+.left-side .icons .icon a:hover i,
+.right-side .icons .icon a:hover i {
+    transform: scale(1.2);
+}
+.left-side .icons .icon a i,
+.right-side .icons .icon a i {
+    color: white;
+}
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 380px;
+    margin-bottom: 20px;
+}
+.input-container span {
+    position: absolute;
+    left: 0;
+    top: -5px;
+    color: gray;
+}
+.input-container i {
+    position: absolute;
+    right: 0;
+    color: gray;
+}
+
+.input-container input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-size: 20px;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid grey;
+    padding-right: 20px;
+    color: white;
+}
+.input-container input:focus + i {
+    color: rgb(209, 66, 14);
+}
+.right-side .check-text {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.right-side button {
+    width: 150px;
+    border-radius: 3px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    padding: 0 20px;
+    transition: all 0.3s;
+    background-color: rgb(209, 66, 14);
+}
+.right-side button:hover {
+    background-color: rgba(209, 66, 14, 0.6);
+}
+.right-side button i {
+    transition: all 0.5s;
+    position: relative;
+}
+.right-side button:hover i {
+    right: -10px;
+}
+.right-side .logo {
+    display: none;
+}
+.right-side .icons {
+    display: none;
+}
+.right-side .have {
+    color: white;
+    display: inline-block;
+    margin-left: 20px;
+    border-bottom: 2px solid white;
+}
+@media (max-width: 1150px) {
+    .left-side {
+        padding-left: 20px;
+    }
+    .left-side p {
+        width: 400px;
+    }
+}
+@media (max-width: 920px) {
+    .left-side p {
+        width: 100%;
+    }
+    .right-side {
+        min-width: 400px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .right-side .input-container {
+        width: 100%;
+    }
+    .left-side h1 {
+        width: 100%;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 660px) {
+    .wrapper {
+        justify-content: center;
+    }
+    .left-side {
+        display: none;
+    }
+    .right-side .icons {
+        display: flex;
+        margin-top: 20px;
+    }
+    .right-side .logo {
+        display: block;
+    }
+    .right-side .input-container {
+        width: 100%;
+    }
+    .right-side {
+        width: 400px;
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 420px) {
+    .wrapper {
+        min-height: 800px;
+    }
+    .right-side {
+        min-width: 320px;
+        padding-top: 30px;
+    }
+}
